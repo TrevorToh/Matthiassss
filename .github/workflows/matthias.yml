@@ -14,8 +14,11 @@ jobs:
           run: echo `Current time in Github is ${data}`
         - id: s01
           run: ls -al
-        - id: s02
-          run: cat test.txt
+        - name: Ship it
+          uses: mscoutermarsh/cowsays-action@master
+          with:
+            text: 'ship ship ship!'
+            color: 'red'
         
         
     
