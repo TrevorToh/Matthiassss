@@ -11,13 +11,18 @@ jobs:
         runs-on: macos-latest
         steps: 
         - id: s00           
-          run: echo `Current time in Github is ${data}`
-        - id: s01
+          run: echo "Current time in Github is ${data}"
+        - id: s01          
+        # > is replace, >> is append
+          run: echo "CURR_DATE=${date}" >> $GITHUB_OUTPUT
+        - id: s02
           run: ls -al
         - name: Ship it
           uses: mscoutermarsh/cowsays-action@master
           with:
-            text: 'ship ship ship!'
+            # STep - context (see thats how u use ids even if they r optional)
+            #write in this format steps.stepnumber.output.name
+            text: '${{steps.s01.outputs.CURR_DATE}}'
             color: 'red'
         
         
