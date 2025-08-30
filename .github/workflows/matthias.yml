@@ -10,9 +10,8 @@ jobs:
     greetings:
         runs-on: macos-15.0
         steps: 
-        - id: s00
-            # running some commands in shell bash/zsh
-            run: echo `Current time in Github is ${data}`
+        - id: s00           
+          run: echo `Current time in Github is ${data}`
 
     
 
