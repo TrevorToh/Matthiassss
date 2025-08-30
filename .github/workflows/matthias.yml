@@ -22,7 +22,7 @@ jobs:
           with:
             # STep - context (see thats how u use ids even if they r optional)
             #write in this format steps.stepnumber.output.name
-            text: '${{steps.s01.outputs.CURR_DATE}}'
+            text: 'moo moo cow! ${{steps.s01.outputs.CURR_DATE}}'
             color: 'red'
         
         
