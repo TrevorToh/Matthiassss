@@ -8,7 +8,7 @@ on:
 #One or more jobs
 jobs:
     greetings:
-        runs-on: macos-15.0
+        runs-on: macos-latest
         steps: 
         - id: s00           
           run: echo `Current time in Github is ${data}`
